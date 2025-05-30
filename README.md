@@ -17,3 +17,20 @@ Contraseña: password
 http://localhost:8080/?continue
 
 (definido en el MainController)
+
+## URLs públicas
+
+(Sin estar logueado)
+
+http://localhost:8080/public/show
+
+## URLs protegidas
+
+(Sólo para el rol ADMIN)
+
+http://localhost:8080/admin
+
+(Sólo para los roles ADMIN/USER)
+
+http://localhost:8080/user/show
+
