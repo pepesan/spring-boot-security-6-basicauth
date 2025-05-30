@@ -3,10 +3,15 @@
 ## URL de login
 http://localhost:8080/login
 
-Datos de acceso
+Datos de acceso usuario admin
 
-Usuario: user
-Contraseña: (definida dentro del log)
+Usuario: admin
+Contraseña: admin
+
+Datos de acceso usuario pepesan
+
+Usuario: pepesan
+Contraseña: password
 
 ## URL de dashboard
 http://localhost:8080/?continue
