@@ -1,36 +1,52 @@
-# Ejemplo de aplicaicón Spring Boot 3 con Security 6 y Basic Auth
+# Ejemplo de aplicación Spring Boot 3 con Security 6 y JWT
 
-## URL de login
-http://localhost:8080/login
+## URL de login (pública)
+POST http://localhost:8080/api/auth/login
 
 Datos de acceso usuario admin
 
 Usuario: admin
 Contraseña: admin
+```json
+{
+"usernameOrEmail": "admin",
+"password": "admin"
+}
+```
+
 
 Datos de acceso usuario pepesan
 
 Usuario: pepesan
 Contraseña: password
+```json
+{
+"usernameOrEmail": "pepesan",
+"password": "password"
+}
+```
 
-## URL de dashboard
-http://localhost:8080/?continue
+Ambas devolverán el token
 
-(definido en el MainController)
+Deberá meterse como Bearer token en la cabecera de Authorization como:
+
+Bearer TOKEN_GENERADO
 
 ## URLs públicas
 
 (Sin estar logueado)
 
-http://localhost:8080/public/show
+GET http://localhost:8080/public/show
 
 ## URLs protegidas
 
 (Sólo para el rol ADMIN)
 
-http://localhost:8080/admin
+GET http://localhost:8080/admin
+
+GET http://localhost:8080/private/dashboard
 
 (Sólo para los roles ADMIN/USER)
 
-http://localhost:8080/user/show
+GET http://localhost:8080/user/show
 
